@@ -12,22 +12,38 @@ namespace Tyuiu.BurdovKS.Sprint3.Task3.V22.Lib
         public int GetMaxCharCount(string value, char item)
         {
 
-            int count = 0;
+
+
+            int maxCount = 0;  
+            int currentCount = 0; 
 
             foreach (char ch in value)
             {
-                if(ch == item)
+                if (ch == item)
                 {
-                    count++;
+                    currentCount++;
                 }
-               
+                else
+                {
+                    
+                    if (currentCount > maxCount)
+                    {
+                        maxCount = currentCount;
+                    }
+                    currentCount = 0; 
+                }
             }
-            return count;
 
+            
+            if (currentCount > maxCount)
+            {
+                maxCount = currentCount;
+            }
 
-
-
-
+            return maxCount;
         }
+
+
+
     }
-}
+    }

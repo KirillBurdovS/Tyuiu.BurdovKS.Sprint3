@@ -25,7 +25,7 @@ namespace Tyuiu.BurdovKS.Sprint3.Task3.V22.Test
 
             double res = ds.GetMaxCharCount(value, item);
 
-            double wait = 7;
+            double wait = 3;
 
             Assert.AreEqual(res, wait);
 
